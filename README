@@ -8,9 +8,10 @@ At the moment the goals are as follows:
 
 1. Write a decent interface for the key methods of the NCBI web services that return JSON formatted PubMed data.
 
-2. Add the data to an SQLITE database with FTS4 full text search support enabled.
+2. Create a set of tables out of the data and add it to an SQLITE database with FTS4 full text search support enabled.
 
-3. Do some post processing on the data such as latent semantic indexing using svdlibc (for which we'll need a node.js interface).
+3. Post processing to add various meta data such as latent semantic indexing using svdlibc for example.
 
-4. Build a browser based search interface that can provide a mining interface over the dataset. Will implement the features of FTS4 and other things such as faceted search, sorting, grouping etc.
+* At this point could implement a web service that delivers processed pubmed data as sqlite databases as a service *
 
+4. Build a decent mining inteface for the dataset. Will implement the features of FTS4 and other things such as faceted search, sorting, grouping etc.
