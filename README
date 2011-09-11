@@ -8,7 +8,7 @@ PubMed Data Analysis Engine
 
     At the moment the goals are as follows:
 
-	    1. Write a decent interface for the key methods of the NCBI
+        1. Write a decent interface for the key methods of the NCBI
            web services that return JSON formatted PubMed data.
 
     	2. Create a set of tables out of the data and add it to an
