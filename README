@@ -1,0 +1,7 @@
+# PubMed Data Analysis Engine
+# 
+# The engine works by querying NCBI web services for pubmed data.
+#
+# The data is processed. Extra taxonomy information is added and the data is stored in an sqlite database ready for presentation.
+#
+# An advanced user interface is to be developed which implements advanced search features such as faceting to help users mine the data.
