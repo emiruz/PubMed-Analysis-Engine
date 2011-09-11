@@ -1,7 +1,16 @@
-# PubMed Data Analysis Engine
-# 
-# The engine works by querying NCBI web services for pubmed data.
-#
-# The data is processed. Extra taxonomy information is added and the data is stored in an sqlite database ready for presentation.
-#
-# An advanced user interface is to be developed which implements advanced search features such as faceting to help users mine the data.
+PubMed Data Analysis Engine
+
+...a node.js centric project.
+
+The aim of the project is to make large amounts of pubmed search results easy to mine. This is useful because using pubmed is a pain, and decent mining software could increase the productivity of pubmed users substantially.
+
+At the moment the goals are as follows:
+
+1. Write a decent interface for the key methods of the NCBI web services that return JSON formatted PubMed data.
+
+2. Add the data to an SQLITE database with FTS4 full text search support enabled.
+
+3. Do some post processing on the data such as latent semantic indexing using svdlibc (for which we'll need a node.js interface).
+
+4. Build a browser based search interface that can provide a mining interface over the dataset. Will implement the features of FTS4 and other things such as faceted search, sorting, grouping etc.
+
