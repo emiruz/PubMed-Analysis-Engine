@@ -137,11 +137,14 @@ exports.query = function (q, l, callback) {
     var urlString = template(queryTemplate, {"terms": escape(q), "limit": l});
 
     httpGet(urlString, function (data) {
-        console.log(data);
-        var idXml = libxmljs.parseXmlString(data);
+        var idXml = libxmljs.parseXmlString(data.toString());
         var ids = idXml.find('/eSearchResult/IdList/Id');
         var idsStr = "";
         for (var idIndex in ids) idsStr +=ids[idIndex].text() + ",";
+	if (idsStr == "") {
+		callback([]);
+		return;
+	}
         idsStr = idsStr.substring(0, idsStr.length -1);
 
             httpGet(template(dataTemplate, {"idlist": idsStr}), function(info) {
