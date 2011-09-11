@@ -1,17 +1,35 @@
 PubMed Data Analysis Engine
 
-...a node.js centric project.
+    ...a node.js centric project.
 
-The aim of the project is to make large amounts of pubmed search results easy to mine. This is useful because using pubmed is a pain, and decent mining software could increase the productivity of pubmed users substantially.
+    The aim of the project is to make large amounts of pubmed search results easy to mine.
+    This is useful because using pubmed is a pain, and decent mining software could increase
+    the productivity of pubmed users substantially.
 
-At the moment the goals are as follows:
+    At the moment the goals are as follows:
 
-1. Write a decent interface for the key methods of the NCBI web services that return JSON formatted PubMed data.
+	    1. Write a decent interface for the key methods of the NCBI
+           web services that return JSON formatted PubMed data.
 
-2. Create a set of tables out of the data and add it to an SQLITE database with FTS4 full text search support enabled.
+    	2. Create a set of tables out of the data and add it to an
+           SQLITE database with FTS4 full text search support enabled.
 
-3. Post processing to add various meta data such as latent semantic indexing using svdlibc for example.
+    	3. Post processing to add various meta data such as latent semantic
+           indexing using svdlibc for example.
 
-* At this point could implement a web service that delivers processed pubmed data as sqlite databases as a service *
+    	*. At this point could implement a web service that delivers processed
+           pubmed data as sqlite databases as a service
 
-4. Build a decent mining inteface for the dataset. Will implement the features of FTS4 and other things such as faceted search, sorting, grouping etc.
+    	4. Build a decent mining inteface for the dataset. Will implement the
+           features of FTS4 and other things such as faceted search, sorting, grouping etc.
+
+     Dependencies
+
+        1. Requires polotek's libxmljs for XML processing:
+
+            https://github.com/polotek/libxmljs/wiki
+
+
+    Suggestions, criticism and contributions are all warmly appreciated.
+
+    Emir
