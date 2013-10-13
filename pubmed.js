@@ -116,7 +116,7 @@ function getMeshHeadings(entries) {
 
         heading["qualifiers"] = getValues(entry, "QualifierName");
 
-        headings.push(author);
+        headings.push(heading);
     }
     return headings;
 }
@@ -169,7 +169,7 @@ exports.query = function (q, l, callback) {
 
                     dataEntry["reviseddate"] = getDate(entry, "DateRevised");
 
-                    dataEntry["meshheadings"] = getAuthorsList(entry.find('MeshHeadingList/MeshHeading'));
+                    dataEntry["meshheadings"] = getMeshHeadings(entry.find('MeshHeadingList/MeshHeading'));
 
                     var article = entry.get("Article");
 
